@@ -1,0 +1,24 @@
+{
+  "id": "bd6de70f-a093-45a2-8994-1ee05f5737e8",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1750151415/instagram_posts/vqotumpflehk7bgrnnjt.jpg",
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1750151415/instagram_posts/jaimsbk4lzxe8fnngoff.jpg"
+  ],
+  "media_type": "carousel",
+  "caption": "Ever wondered what goes into creating a truly memorable dining experience? \u2728  Swipe \u2192 to uncover the journey behind HOGIST, from concept to culinary delight!  We're taking you behind the scenes! \ud83e\udd29 Let's explore the story together.\u27a1\ufe0f #HOGIST #CulinaryJourney #RestaurantLife #FoodieAdventures #BehindTheScenes #DiningExperience #SaveThisPost #ShareTheLove",
+  "scheduled_time": "2025-06-17T09:10:16.326559",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "276cf78d-3cbf-426d-bf7a-d09e0074ceba",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-17T09:10:16.425448",
+  "updated_at": "2025-06-17T09:10:16.968869",
+  "cloudinary_public_ids": [
+    "instagram_posts/vqotumpflehk7bgrnnjt",
+    "instagram_posts/jaimsbk4lzxe8fnngoff"
+  ],
+  "is_facebook": false,
+  "platforms": "Instagram"
+}

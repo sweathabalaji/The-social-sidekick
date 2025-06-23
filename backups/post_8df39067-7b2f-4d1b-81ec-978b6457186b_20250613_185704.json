@@ -1,0 +1,21 @@
+{
+  "id": "8df39067-7b2f-4d1b-81ec-978b6457186b",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749841022/instagram_posts/ff04eh7esuuoyzkhjeny.jpg"
+  ],
+  "media_type": "image",
+  "caption": "Indulge in a royal feast! \u2728 Our Maharaja Meals Weekly Food Combo Deal offers a delicious journey through North and South Indian cuisine.  Mutton Rogan Josh, Lemon Rice, and so much more await! \ud83d\ude0b  Order now and experience the taste of royalty.  Above 100pax? Free delivery! What's your favorite dish from this combo? Let us know in the comments! \ud83d\udc47 #MaharajaMeals #IndianFood #WeeklyCombo #FoodDeal #Foodie #IndianCuisine #PragacKitchen #OrderNow #FreeDelivery",
+  "scheduled_time": "2025-06-13T18:57:01",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "58da9deb-3c28-41be-88ff-3c59e42c814e",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-13T18:57:01.548970",
+  "updated_at": "2025-06-13T18:57:01.583213",
+  "cloudinary_public_ids": [
+    "instagram_posts/ff04eh7esuuoyzkhjeny"
+  ],
+  "is_facebook": false
+}

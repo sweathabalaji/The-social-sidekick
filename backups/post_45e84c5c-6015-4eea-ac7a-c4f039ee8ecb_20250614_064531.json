@@ -1,0 +1,21 @@
+{
+  "id": "45e84c5c-6015-4eea-ac7a-c4f039ee8ecb",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749883512/instagram_posts/ajhkzrtbge9kchmtwkym.jpg"
+  ],
+  "media_type": "image",
+  "caption": "Indulge in a culinary journey with our Maharaja Meals Weekly Combo Deal! \u2728  Experience the rich flavors of North and South Indian cuisine, from Mutton Rogan Josh to Lemon Rice. This feast includes delicious sides and decadent desserts.  Ready to treat yourself (or your team)? Order now!  Above 100pax? We deliver FREE! \ud83e\udd29 What's your favorite Indian dish from this combo? \ud83d\udc47 #MaharajaMeals #IndianFood #WeeklyCombo #FoodDeal #Catering #FreeDelivery #IndianCuisine #Foodie #Delicious #PragacKitchen",
+  "scheduled_time": "2025-06-14T06:45:13.049036",
+  "username": "hogistindia",
+  "status": "failed",
+  "celery_task_id": "82d1c52e-8577-4a18-b5a4-b86191dc0efe",
+  "posting_attempt_at": null,
+  "error_message": "type object 'Config' has no attribute 'FACEBOOK_ACCESS_TOKEN'",
+  "media_id": null,
+  "created_at": "2025-06-14T06:45:13.115459",
+  "updated_at": "2025-06-14T06:45:31.197273",
+  "cloudinary_public_ids": [
+    "instagram_posts/ajhkzrtbge9kchmtwkym"
+  ],
+  "is_facebook": true
+}

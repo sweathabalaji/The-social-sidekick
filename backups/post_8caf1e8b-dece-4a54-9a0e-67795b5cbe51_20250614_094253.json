@@ -1,0 +1,22 @@
+{
+  "id": "8caf1e8b-dece-4a54-9a0e-67795b5cbe51",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/video/upload/v1749894171/instagram_posts/dufcd0fam4vgwdldu0bh.mp4"
+  ],
+  "media_type": "reel",
+  "caption": "Corporate event stress? \ud83d\ude29 We've got you covered! \ud83d\udcaf Let Hogist handle the food so you can focus on what matters. \u2728 Watch till the end to see our delicious menu!\ud83e\udd24 #CorporateEvents #EventPlanning #ChennaiFoodie  What's your must-have corporate event dish? \ud83d\udc47",
+  "scheduled_time": "2025-06-14T09:42:52.812126",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "2462fe41-b1e5-43a8-9d4d-d27803040769",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-14T09:42:52.906220",
+  "updated_at": "2025-06-14T09:42:52.982491",
+  "cloudinary_public_ids": [
+    "instagram_posts/dufcd0fam4vgwdldu0bh"
+  ],
+  "is_facebook": true,
+  "platforms": "Facebook"
+}

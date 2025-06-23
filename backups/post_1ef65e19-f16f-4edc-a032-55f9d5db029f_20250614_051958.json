@@ -1,0 +1,23 @@
+{
+  "id": "1ef65e19-f16f-4edc-a032-55f9d5db029f",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749878393/instagram_posts/wrfkdn2s26ixobcmfe4y.jpg",
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749878394/instagram_posts/vo5bbehzexhg1vkhulbh.jpg"
+  ],
+  "media_type": "carousel",
+  "caption": "Ever wondered how Hogist revolutionizes the food industry? \ud83e\udd14  Swipe through \u2192 to uncover our incredible journey! From concept to creation, we'll show you what makes us unique. \u2728  Save this post to share the story with your foodie friends!  \ud83d\ude0b #Hogist #FoodRevolution #FoodieJourney #Innovation #FoodTech #Gastronomy #SaveThisPost #ShareTheLove What's your favorite part of our story?",
+  "scheduled_time": "2025-06-14T05:19:54",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "2b3503c9-edf9-4c68-bc54-098c17229506",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-14T05:19:55.043678",
+  "updated_at": "2025-06-14T05:19:55.170559",
+  "cloudinary_public_ids": [
+    "instagram_posts/wrfkdn2s26ixobcmfe4y",
+    "instagram_posts/vo5bbehzexhg1vkhulbh"
+  ],
+  "is_facebook": false
+}

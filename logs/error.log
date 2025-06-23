@@ -1,0 +1,673 @@
+2025-06-06 20:17:16,818 - tasks - ERROR - Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:17:16,822 - tasks - ERROR - Configuration validation failed: Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:17:57,807 - tasks - ERROR - Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:17:57,808 - tasks - ERROR - Configuration validation failed: Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:55:15,985 - tasks - ERROR - Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:55:15,986 - tasks - ERROR - Configuration validation failed: Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:55:49,572 - tasks - ERROR - Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:55:49,573 - tasks - ERROR - Configuration validation failed: Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:56:08,397 - tasks - ERROR - Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-06 20:56:08,397 - tasks - ERROR - Configuration validation failed: Missing required configuration(s): GEMINI_API_KEY, INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_BUSINESS_ACCOUNT_ID, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2025-06-14 00:19:04,555 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:49:04.484423')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:49:04.484423')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:19:22,627 - tasks - ERROR - Error saving scheduled post to DB: (sqlite3.OperationalError) table scheduled_posts has no column named is_facebook
+[SQL: INSERT INTO scheduled_posts (id, media_urls, media_type, caption, scheduled_time, username, status, celery_task_id, posting_attempt_at, error_message, media_id, created_at, updated_at, cloudinary_public_ids, is_facebook) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('7521e1f8-c025-4f4d-b4ff-064adfaffc82', '["https://res.cloudinary.com/dojxw2gy6/image/upload/v1749840564/instagram_posts/xgnpg961porlwhbakinf.jpg"]', 'image', "Indulge in a royal feast! ✨ Our Maharaja Meals Weekly Food Combo Deal offers a delicious journey through North and South Indian cuisine.  Mutton Roga ... (15 characters truncated) ... ice, and more await! 😋 Order now and experience the taste of royalty.  Above 100pax? Free delivery! What's your favorite Indian dish from this combo?", '2025-06-13 18:49:22.000000', 'hogistindia', 'scheduled', None, None, None, None, '2025-06-13 18:49:22.618152', '2025-06-13 18:49:22.625928', '["instagram_posts/xgnpg961porlwhbakinf"]', 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:19:22,634 - tasks - ERROR - Error scheduling Facebook post: (sqlite3.OperationalError) table scheduled_posts has no column named is_facebook
+[SQL: INSERT INTO scheduled_posts (id, media_urls, media_type, caption, scheduled_time, username, status, celery_task_id, posting_attempt_at, error_message, media_id, created_at, updated_at, cloudinary_public_ids, is_facebook) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('7521e1f8-c025-4f4d-b4ff-064adfaffc82', '["https://res.cloudinary.com/dojxw2gy6/image/upload/v1749840564/instagram_posts/xgnpg961porlwhbakinf.jpg"]', 'image', "Indulge in a royal feast! ✨ Our Maharaja Meals Weekly Food Combo Deal offers a delicious journey through North and South Indian cuisine.  Mutton Roga ... (15 characters truncated) ... ice, and more await! 😋 Order now and experience the taste of royalty.  Above 100pax? Free delivery! What's your favorite Indian dish from this combo?", '2025-06-13 18:49:22.000000', 'hogistindia', 'scheduled', None, None, None, None, '2025-06-13 18:49:22.618152', '2025-06-13 18:49:22.625928', '["instagram_posts/xgnpg961porlwhbakinf"]', 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:19:34,338 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:49:34.332876')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:49:34.332876')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:19:37,140 - tasks - ERROR - Error loading scheduled posts from DB: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts ORDER BY scheduled_posts.scheduled_time ASC]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:20:04,345 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:50:04.337291')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:50:04.337291')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:20:34,350 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:50:34.346255')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:50:34.346255')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:21:04,396 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:51:04.376564')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:51:04.376564')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:21:34,413 - tasks - ERROR - Error in monitor_instagram_post_status: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:51:34.408949')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: scheduled_posts.is_facebook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_Assistant-final-main/tasks.py", line 686, in monitor_instagram_post_status
+    ).all()
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/apple/Downloads/Social_media_Assistant-final-main/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: scheduled_posts.is_facebook
+[SQL: SELECT scheduled_posts.id AS scheduled_posts_id, scheduled_posts.media_urls AS scheduled_posts_media_urls, scheduled_posts.media_type AS scheduled_posts_media_type, scheduled_posts.caption AS scheduled_posts_caption, scheduled_posts.scheduled_time AS scheduled_posts_scheduled_time, scheduled_posts.username AS scheduled_posts_username, scheduled_posts.status AS scheduled_posts_status, scheduled_posts.celery_task_id AS scheduled_posts_celery_task_id, scheduled_posts.posting_attempt_at AS scheduled_posts_posting_attempt_at, scheduled_posts.error_message AS scheduled_posts_error_message, scheduled_posts.media_id AS scheduled_posts_media_id, scheduled_posts.created_at AS scheduled_posts_created_at, scheduled_posts.updated_at AS scheduled_posts_updated_at, scheduled_posts.cloudinary_public_ids AS scheduled_posts_cloudinary_public_ids, scheduled_posts.is_facebook AS scheduled_posts_is_facebook 
+FROM scheduled_posts 
+WHERE scheduled_posts.status = ? AND scheduled_posts.scheduled_time <= ?]
+[parameters: ('scheduled', '2025-06-13 18:51:34.408949')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-14 00:23:31,953 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127e4bfd0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:23:35,804 - tasks - ERROR - API Error: {"error":{"message":"(#100) The parameter image_url is required","type":"OAuthException","code":100,"fbtrace_id":"AECCv1HDy-TWwKGIqbPSnmZ"}}
+2025-06-14 00:23:37,146 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"AdS04204h60pvbOiTsRtqkA"}}
+2025-06-14 00:25:01,523 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea5b40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:25:05,314 - tasks - ERROR - API Error: {"error":{"message":"(#100) The parameter image_url is required","type":"OAuthException","code":100,"fbtrace_id":"AFVifo2nfGlIC05qQ7vV6nt"}}
+2025-06-14 00:25:06,886 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"AN4MBTKXpi8TB-I3E2CoJpL"}}
+2025-06-14 00:27:01,587 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea5630> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:27:05,210 - tasks - ERROR - API Error: {"error":{"message":"(#100) The parameter image_url is required","type":"OAuthException","code":100,"fbtrace_id":"AfuamKU47-qWzZuztAarsvk"}}
+2025-06-14 00:27:06,947 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"ABS4lLs1oV1ksq3uyTAEPt1"}}
+2025-06-14 00:29:25,927 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea5de0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:29:31,470 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"ANCipZ7SCYFfn_ajhg-kZJ3"}}
+2025-06-14 00:29:43,852 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea5a50> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:29:49,757 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"AkZCAKgl5y0pKvf51u94ewd"}}
+2025-06-14 00:31:29,625 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea4940> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:31:35,146 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"AwilV21eoWwvntTIJW1xJX7"}}
+2025-06-14 00:31:36,741 - tasks - ERROR - API Error: {"error":{"message":"(#100) The parameter image_url is required","type":"OAuthException","code":100,"fbtrace_id":"AxAoWUO83fOcLktukevVs8T"}}
+2025-06-14 00:36:10,628 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127ea5ba0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:36:15,987 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"Ak6IcgP1-DSo1qjxC2Amd2I"}}
+2025-06-14 00:41:20,603 - tasks - ERROR - Error scheduling Facebook post: Instance <ScheduledPost at 0x127e4ba30> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-14 00:41:25,946 - tasks - ERROR - API Error: {"error":{"message":"(#200) Subject does not have permission to post photos on this page","type":"OAuthException","code":200,"fbtrace_id":"AHwuKAtlAC49sgnyVDU7G2U"}}
+2025-06-14 10:37:29,080 - tasks - ERROR - Error posting to Instagram: local variable 'response' referenced before assignment
+2025-06-14 10:39:26,055 - tasks - ERROR - API Error: {"error":{"message":"Media ID is not available","type":"OAuthException","code":9007,"error_subcode":2207027,"is_transient":false,"error_user_title":"Cannot Publish","error_user_msg":"The media is not ready for publishing, please wait for a moment","fbtrace_id":"AoXd0UehRK5RT0nn6nA81Hs"}}
+2025-06-14 10:45:00,104 - tasks - ERROR - Error posting to Instagram: local variable 'response' referenced before assignment
+2025-06-14 10:45:02,365 - tasks - ERROR - API Error: {"error":{"message":"Media ID is not available","type":"OAuthException","code":9007,"error_subcode":2207027,"is_transient":false,"error_user_title":"Cannot Publish","error_user_msg":"The media is not ready for publishing, please wait for a moment","fbtrace_id":"ANSlBZWvDjoKHH7XrhUBghV"}}
+2025-06-14 10:46:41,703 - tasks - ERROR - Error posting to Instagram: local variable 'response' referenced before assignment
+2025-06-14 10:47:44,575 - tasks - ERROR - API Error: {"error":{"message":"Media ID is not available","type":"OAuthException","code":9007,"error_subcode":2207027,"is_transient":false,"error_user_title":"Cannot Publish","error_user_msg":"The media is not ready for publishing, please wait for a moment","fbtrace_id":"A4vHHjRu3x-A357wy_e8GYG"}}
+2025-06-14 10:47:46,125 - tasks - ERROR - API Error: {"error":{"message":"Media ID is not available","type":"OAuthException","code":9007,"error_subcode":2207027,"is_transient":false,"error_user_title":"Cannot Publish","error_user_msg":"The media is not ready for publishing, please wait for a moment","fbtrace_id":"ATDnkTKrP__R-LROsKETvIM"}}
+2025-06-14 10:49:59,073 - tasks - ERROR - API Error: No response
+2025-06-14 10:50:00,093 - tasks - ERROR - API Error: No response
+2025-06-14 10:55:08,052 - tasks - ERROR - API Error: No response
+2025-06-14 10:56:53,347 - tasks - ERROR - API Error: No response
+2025-06-14 10:56:55,078 - tasks - ERROR - API Error: No response
+2025-06-14 11:02:17,560 - tasks - ERROR - API Error: No response
+2025-06-14 11:09:57,428 - tasks - ERROR - API Error: No response
+2025-06-14 11:11:48,816 - tasks - ERROR - API Error: No response
+2025-06-14 11:15:00,714 - tasks - ERROR - API Error: No response
+2025-06-14 11:15:02,122 - tasks - ERROR - API Error: No response
+2025-06-14 11:27:30,709 - tasks - ERROR - API Error: No response
+2025-06-14 11:27:31,240 - tasks - ERROR - API Error: No response
+2025-06-14 12:12:31,196 - tasks - ERROR - Post fd351237-51cd-4137-b67a-37d1d1f0a23e (Task cf843867-2ea9-4af2-80e3-ac6013b2e76a) failed: type object 'Config' has no attribute 'FACEBOOK_ACCESS_TOKEN'
+2025-06-14 12:15:31,192 - tasks - ERROR - Post 45e84c5c-6015-4eea-ac7a-c4f039ee8ecb (Task 82d1c52e-8577-4a18-b5a4-b86191dc0efe) failed: type object 'Config' has no attribute 'FACEBOOK_ACCESS_TOKEN'
+2025-06-14 12:19:12,498 - tasks - ERROR - Failed to post to Facebook: No response
+2025-06-14 12:33:27,421 - tasks - ERROR - Failed to post to Facebook: No response
+2025-06-14 12:36:56,743 - tasks - ERROR - Failed to post to Facebook: No response
+2025-06-14 12:42:38,863 - tasks - ERROR - Failed to get pages list. Status code: 400, Error: Syntax error "Field access_token specified more than once. This is only possible before version 2.1" at character 33: access_token,name,id,access_token,tasks
+2025-06-14 12:42:38,870 - tasks - ERROR - Failed to get Facebook page access token. Check your permissions and Page ID.
+2025-06-14 12:42:54,246 - tasks - ERROR - Failed to get pages list. Status code: 400, Error: Syntax error "Field access_token specified more than once. This is only possible before version 2.1" at character 33: access_token,name,id,access_token,tasks
+2025-06-14 12:42:54,251 - tasks - ERROR - Failed to get Facebook page access token. Check your permissions and Page ID.
+2025-06-14 12:45:00,794 - tasks - ERROR - Failed to get pages list. Status code: 400, Error: Syntax error "Field access_token specified more than once. This is only possible before version 2.1" at character 33: access_token,name,id,access_token,tasks
+2025-06-14 12:45:00,799 - tasks - ERROR - Failed to get Facebook page access token. Check your permissions and Page ID.
+2025-06-14 12:46:09,385 - tasks - ERROR - Failed to get pages list. Status code: 400, Error: Syntax error "Field access_token specified more than once. This is only possible before version 2.1" at character 33: access_token,name,id,access_token,tasks
+2025-06-14 12:46:09,392 - tasks - ERROR - Failed to get Facebook page access token. Check your permissions and Page ID.
+2025-06-14 13:05:43,760 - tasks - ERROR - Failed to create Facebook album: {"error":{"message":"(#3) Application does not have the capability to make this API call.","type":"OAuthException","code":3,"fbtrace_id":"AAPbumWuAf3WS07XtL7bAMV"}}
+2025-06-14 13:16:20,556 - tasks - ERROR - Failed to create Facebook album: {"error":{"message":"(#3) Application does not have the capability to make this API call.","type":"OAuthException","code":3,"fbtrace_id":"AMnQ4VLQNYVrtK0LisAFPjP"}}
+2025-06-14 13:19:03,884 - tasks - ERROR - Post 080a2a8d-9045-43d6-8ebb-d267fb435c9c (Task 885aaf6f-f33f-4824-9a3a-551984ac0334) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:19:03,937 - tasks - ERROR - Post 0ae7ecab-1f32-459e-a7a4-e6ec8efe4f0b (Task 01804985-bd75-41f8-a1f7-026cecc187f3) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:19:33,831 - tasks - ERROR - Post 27ff08d8-204b-49c9-8371-6e0152e63568 (Task 7997ea10-5bca-4390-a164-ca7c941d48c7) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:19:33,869 - tasks - ERROR - Post 53068e65-949e-412c-b407-4e66205e4486 (Task d28ef788-b776-4829-867c-0d23ce6da4ac) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:24:33,917 - tasks - ERROR - Post 3c79dc1e-0af1-45c8-a7f2-c96af05a31f2 (Task ed30e19e-b223-43a5-88ad-bc91c93d0f72) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:24:33,988 - tasks - ERROR - Post 78d9d89d-c162-438a-b58e-eed1ff6540b6 (Task 3e610fae-dd95-4e0d-b70e-2a7a6036d3e0) failed: TypeError('Object of type coroutine is not JSON serializable')
+2025-06-14 13:26:10,881 - tasks - ERROR - Error getting Facebook page access token: type object 'Config' has no attribute 'FACEBOOK_USER_ACCESS_TOKEN'
+2025-06-14 13:28:37,955 - tasks - ERROR - Error getting Facebook page access token: type object 'Config' has no attribute 'FACEBOOK_USER_ACCESS_TOKEN'
+2025-06-14 13:31:21,606 - tasks - ERROR - Error getting Facebook page access token: type object 'Config' has no attribute 'FACEBOOK_USER_ACCESS_TOKEN'
+2025-06-14 14:44:57,812 - tasks - ERROR - Error scheduling post: Never call result.get() within a task!
+See https://docs.celeryq.dev/en/latest/userguide/tasks.html#avoid-launching-synchronous-subtasks
+
+2025-06-14 14:45:03,805 - tasks - ERROR - Failed to post to Facebook: Failed to verify app capabilities: (#100) Tried accessing nonexisting field (tasks) on node type (Page)
+2025-06-14 14:50:19,344 - tasks - ERROR - Error scheduling post: Never call result.get() within a task!
+See https://docs.celeryq.dev/en/latest/userguide/tasks.html#avoid-launching-synchronous-subtasks
+
+2025-06-14 14:50:20,360 - tasks - ERROR - Failed to enqueue posting task for post 4e4e55c7-2869-4d6c-9359-ab77af291471: 'function' object has no attribute 'delay'
+2025-06-14 14:50:25,176 - tasks - ERROR - Failed to post to Facebook: Failed to verify app capabilities: (#100) Tried accessing nonexisting field (tasks) on node type (Page)
+2025-06-14 15:17:02,022 - tasks - ERROR - Failed to initialize upload: (#100) Param content_category must be one of {BEAUTY_FASHION, BUSINESS, CARS_TRUCKS, COMEDY, CUTE_ANIMALS, ENTERTAINMENT, FAMILY, FOOD_HEALTH, HOME, LIFESTYLE, MUSIC, NEWS, POLITICS, SCIENCE, SPORTS, TECHNOLOGY, VIDEO_GAMING, OTHER}
+2025-06-14 15:17:02,026 - tasks - ERROR - Full error response: {'error': {'message': '(#100) Param content_category must be one of {BEAUTY_FASHION, BUSINESS, CARS_TRUCKS, COMEDY, CUTE_ANIMALS, ENTERTAINMENT, FAMILY, FOOD_HEALTH, HOME, LIFESTYLE, MUSIC, NEWS, POLITICS, SCIENCE, SPORTS, TECHNOLOGY, VIDEO_GAMING, OTHER}', 'type': 'OAuthException', 'code': 100, 'fbtrace_id': 'Av4JTYGigH7TAmSYom6-t0-'}}
+2025-06-14 15:19:26,311 - tasks - ERROR - Chunk upload failed: {'error': {'message': '(#194) Requires all of the params: upload_session_id,start_offset', 'type': 'OAuthException', 'code': 194, 'fbtrace_id': 'AZJefd6RBoiX73lLrcVyzOp'}}
+2025-06-14 15:26:19,286 - tasks - ERROR - Failed to finish upload: {'error': {'message': 'Invalid parameter', 'type': 'OAuthException', 'code': 100, 'error_subcode': 1363143, 'is_transient': False, 'error_user_title': 'Error Uploading Video', 'error_user_msg': 'The filename is too long. Please try again with a shorter filename.', 'fbtrace_id': 'AeV4kQfedDXJRqRxq0qcg1t'}}
+2025-06-14 15:28:48,829 - tasks - ERROR - Failed to finish upload: {'error': {'message': 'Invalid parameter', 'type': 'OAuthException', 'code': 100, 'error_subcode': 1363143, 'is_transient': False, 'error_user_title': 'Error Uploading Video', 'error_user_msg': 'The filename is too long. Please try again with a shorter filename.', 'fbtrace_id': 'AkQBn9Xu9xul0bJiVBYkye8'}}
+2025-06-14 16:55:51,148 - tasks - ERROR - Post 89e31760-389c-49cd-ae8f-c2128e8039fa not found in database
+2025-06-14 17:00:01,454 - tasks - ERROR - Post a3588365-c4ca-443f-b0f9-a2a61b511140 not found in database
+2025-06-14 17:00:03,434 - tasks - ERROR - Post a3588365-c4ca-443f-b0f9-a2a61b511140 not found in database
+2025-06-14 17:00:33,373 - tasks - ERROR - Post 15598fda-4f2b-4b7c-80d9-051473c22ae1 (Task 7e268115-c4c0-46d5-9d37-ff01ef7ce043) failed: local variable 'db' referenced before assignment
+2025-06-14 17:02:51,096 - tasks - ERROR - Post 606a5a20-ae32-47d1-a281-e0ded46c0d1a (Task 37763f0d-b05c-4514-aeb3-559d380dc1ba) failed: local variable 'db' referenced before assignment
+2025-06-15 15:26:48,146 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) table scheduled_posts already exists
+[SQL: 
+CREATE TABLE scheduled_posts (
+	id VARCHAR NOT NULL, 
+	media_urls JSON NOT NULL, 
+	media_type VARCHAR NOT NULL, 
+	caption TEXT NOT NULL, 
+	scheduled_time DATETIME NOT NULL, 
+	username VARCHAR NOT NULL, 
+	status VARCHAR, 
+	celery_task_id VARCHAR, 
+	posting_attempt_at DATETIME, 
+	error_message TEXT, 
+	media_id VARCHAR, 
+	created_at DATETIME, 
+	updated_at DATETIME, 
+	cloudinary_public_ids JSON, 
+	is_facebook BOOLEAN, 
+	platforms VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-16 11:28:15,273 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) no such table: post_status_history
+[SQL: 
+DROP TABLE post_status_history]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-18 11:57:13,340 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) no such table: scheduled_posts
+[SQL: 
+DROP TABLE scheduled_posts]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-18 11:57:13,346 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) table scheduled_posts already exists
+[SQL: 
+CREATE TABLE scheduled_posts (
+	id VARCHAR NOT NULL, 
+	media_urls JSON NOT NULL, 
+	media_type VARCHAR NOT NULL, 
+	caption TEXT NOT NULL, 
+	scheduled_time DATETIME NOT NULL, 
+	username VARCHAR NOT NULL, 
+	status VARCHAR, 
+	celery_task_id VARCHAR, 
+	posting_attempt_at DATETIME, 
+	error_message TEXT, 
+	media_id VARCHAR, 
+	created_at DATETIME, 
+	updated_at DATETIME, 
+	cloudinary_public_ids JSON, 
+	is_facebook BOOLEAN, 
+	platforms VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-18 12:56:42,233 - tasks - ERROR - Error in caption generation: Invalid media path: 
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 389, in generate_captions
+    raise ValueError(f"Invalid media path: {path}")
+ValueError: Invalid media path: 
+2025-06-18 13:01:42,439 - tasks - ERROR - Error in caption generation: Invalid media path: 
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 389, in generate_captions
+    raise ValueError(f"Invalid media path: {path}")
+ValueError: Invalid media path: 
+2025-06-18 13:06:42,481 - tasks - ERROR - Error in caption generation: Invalid media path: 
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 389, in generate_captions
+    raise ValueError(f"Invalid media path: {path}")
+ValueError: Invalid media path: 
+2025-06-18 13:11:42,530 - tasks - ERROR - Error in caption generation: Invalid media path: 
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 389, in generate_captions
+    raise ValueError(f"Invalid media path: {path}")
+ValueError: Invalid media path: 
+2025-06-20 15:29:17,500 - tasks - ERROR - Error scheduling post: Invalid isoformat string: '2025-06-20T10:58:27.054Z'
+2025-06-20 15:32:14,467 - tasks - ERROR - Error scheduling post: Invalid isoformat string: '2025-06-20T10:58:27.054Z'
+2025-06-20 15:39:13,291 - tasks - ERROR - Error scheduling post: Invalid isoformat string: '2025-06-20T11:08:34.432Z'
+2025-06-20 16:03:25,359 - tasks - ERROR - Error scheduling post: Invalid isoformat string: '2025-06-20T11:32:18.782Z'
+2025-06-21 18:27:29,046 - tasks - ERROR - Error getting Instagram account ID: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478?access_token=EAAVYzDzRXxwBO5wnfZAdTGaOKiT1wiM7dyXQP0lOQp1ZCf3RlObxs7svasxfehgozVAJHZCKCrazYl1WjyV7lA50Uu8L1A48f0QQNGrPAjdmBlfHbZCQsFZAmrlK52mZCcrGorCxcSj8AQsnJJ0w1oZBbTSZCloRRGzOxzMZA2atXi99xf5if8RsPn33RkTf2&fields=instagram_business_account (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11b5776d0>: Failed to resolve 'graph.facebook.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 18:29:26,259 - tasks - ERROR - Post e9a9642c-d407-4ddc-9e9a-11dc639d27b1 not found in database
+2025-06-21 18:38:24,197 - tasks - ERROR - Post e0fe41a2-9373-4161-bec6-8124a41ea616 not found in database
+2025-06-21 18:40:02,519 - tasks - ERROR - Post 5028873e-a505-4abf-a1d8-2b623fa53a4c not found in database
+2025-06-21 18:56:19,985 - tasks - ERROR - Error downloading media from URL https://res.cloudinary.com/dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 18:56:19,988 - tasks - ERROR - Error processing media file https://res.cloudinary.com/dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 18:56:19,990 - tasks - ERROR - Error in caption generation: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 401, in generate_captions
+    response = requests.get(path, stream=True, timeout=30)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057e020>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:01:15,738 - tasks - ERROR - Error getting Instagram account ID: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478?access_token=EAAVYzDzRXxwBO5wnfZAdTGaOKiT1wiM7dyXQP0lOQp1ZCf3RlObxs7svasxfehgozVAJHZCKCrazYl1WjyV7lA50Uu8L1A48f0QQNGrPAjdmBlfHbZCQsFZAmrlK52mZCcrGorCxcSj8AQsnJJ0w1oZBbTSZCloRRGzOxzMZA2atXi99xf5if8RsPn33RkTf2&fields=instagram_business_account (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12036bbb0>: Failed to resolve 'graph.facebook.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:01:30,742 - tasks - ERROR - Network error during video upload: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478/videos (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x122808ac0>, 'Connection to graph.facebook.com timed out. (connect timeout=None)'))
+2025-06-21 19:01:50,067 - tasks - ERROR - Error downloading media from URL https://res.cloudinary.com/dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:01:50,099 - tasks - ERROR - Error processing media file https://res.cloudinary.com/dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:01:50,103 - tasks - ERROR - Error in caption generation: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 401, in generate_captions
+    response = requests.get(path, stream=True, timeout=30)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/video/upload/v1750512347/instagram_posts/he6xrtkzudsefqvp9zpg.mov (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1203f7b50>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:04:29,103 - tasks - ERROR - Error getting Instagram account ID: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478?access_token=EAAVYzDzRXxwBO5wnfZAdTGaOKiT1wiM7dyXQP0lOQp1ZCf3RlObxs7svasxfehgozVAJHZCKCrazYl1WjyV7lA50Uu8L1A48f0QQNGrPAjdmBlfHbZCQsFZAmrlK52mZCcrGorCxcSj8AQsnJJ0w1oZBbTSZCloRRGzOxzMZA2atXi99xf5if8RsPn33RkTf2&fields=instagram_business_account (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12057d9f0>: Failed to resolve 'graph.facebook.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:23:19,049 - tasks - ERROR - Connection error while getting Instagram account ID: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478?access_token=EAAVYzDzRXxwBO5wnfZAdTGaOKiT1wiM7dyXQP0lOQp1ZCf3RlObxs7svasxfehgozVAJHZCKCrazYl1WjyV7lA50Uu8L1A48f0QQNGrPAjdmBlfHbZCQsFZAmrlK52mZCcrGorCxcSj8AQsnJJ0w1oZBbTSZCloRRGzOxzMZA2atXi99xf5if8RsPn33RkTf2&fields=instagram_business_account (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11f5d4bb0>: Failed to resolve 'graph.facebook.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 19:48:05,953 - tasks - ERROR - Network error during video upload: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/338892676762478/videos (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x12795d870>, 'Connection to graph.facebook.com timed out. (connect timeout=None)'))
+2025-06-21 19:48:17,017 - tasks - ERROR - Error posting carousel to Facebook: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v19.0/me/accounts?access_token=EAAVYzDzRXxwBO5wnfZAdTGaOKiT1wiM7dyXQP0lOQp1ZCf3RlObxs7svasxfehgozVAJHZCKCrazYl1WjyV7lA50Uu8L1A48f0QQNGrPAjdmBlfHbZCQsFZAmrlK52mZCcrGorCxcSj8AQsnJJ0w1oZBbTSZCloRRGzOxzMZA2atXi99xf5if8RsPn33RkTf2 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x12565f460>: Failed to resolve 'graph.facebook.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-21 20:12:35,297 - tasks - ERROR - Error deleting media jvuxt1yhfbwpyjyiy4dq from Cloudinary: Unexpected error - MaxRetryError('TCPKeepAliveHTTPSConnectionPool(host=\'api.cloudinary.com\', port=443): Max retries exceeded with url: /v1_1/dojxw2gy6/image/destroy (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x123e81930>: Failed to resolve \'api.cloudinary.com\' ([Errno 8] nodename nor servname provided, or not known)"))')
+2025-06-21 20:13:16,114 - tasks - ERROR - Error deleting media jvuxt1yhfbwpyjyiy4dq from Cloudinary: Unexpected error - MaxRetryError('TCPKeepAliveHTTPSConnectionPool(host=\'api.cloudinary.com\', port=443): Max retries exceeded with url: /v1_1/dojxw2gy6/image/destroy (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x123f78f10>: Failed to resolve \'api.cloudinary.com\' ([Errno 8] nodename nor servname provided, or not known)"))')
+2025-06-22 08:09:40,075 - tasks - ERROR - Post 43c254ff-93dc-49f7-baec-3e569dce114b not found in database
+2025-06-22 10:10:33,439 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) no such table: post_status_history
+[SQL: 
+DROP TABLE post_status_history]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-22 10:19:11,028 - tasks - ERROR - Error recreating database: (sqlite3.OperationalError) no such table: scheduled_posts
+[SQL: 
+DROP TABLE scheduled_posts]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-22 10:36:20,843 - tasks - ERROR - Error downloading media from URL https://res.cloudinary.com/dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-22 10:36:20,849 - tasks - ERROR - Error processing media file https://res.cloudinary.com/dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-06-22 10:36:20,853 - tasks - ERROR - Error in caption generation: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/HOGIST PROJECT/Social_media_automation_final_igfb/tasks.py", line 412, in generate_captions
+    response = requests.get(path, stream=True, timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='res.cloudinary.com', port=443): Max retries exceeded with url: /dojxw2gy6/image/upload/v1750568750/instagram_posts/os046bkgpy9h8ibfvzcq.jpg (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x126a682b0>: Failed to resolve 'res.cloudinary.com' ([Errno 8] nodename nor servname provided, or not known)"))

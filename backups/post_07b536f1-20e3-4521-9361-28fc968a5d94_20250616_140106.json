@@ -1,0 +1,22 @@
+{
+  "id": "07b536f1-20e3-4521-9361-28fc968a5d94",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1750082463/instagram_posts/fokjyhpydix66ce6tbuf.jpg"
+  ],
+  "media_type": "image",
+  "caption": "\ud83d\udd25 Ready to elevate your culinary game?  Hogist brings the heat!  Our innovative tools are designed to make cooking easier and more enjoyable.  Check out our latest collection and let us know what you're cooking up this weekend! \ud83d\udc47 #Hogist #CookingMadeEasy #KitchenTools #Foodie #CulinaryAdventures #WhatAreYouCooking",
+  "scheduled_time": "2025-06-16T14:01:04.013286",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "b71ca44f-4a84-4693-b064-e0ab6415b8e9",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-16T14:01:04.230284",
+  "updated_at": "2025-06-16T14:01:04.638410",
+  "cloudinary_public_ids": [
+    "instagram_posts/fokjyhpydix66ce6tbuf"
+  ],
+  "is_facebook": false,
+  "platforms": "Instagram"
+}

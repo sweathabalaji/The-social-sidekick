@@ -1,0 +1,23 @@
+{
+  "id": "4f6eae47-ba05-496f-9b14-4c41ecd22a75",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749878808/instagram_posts/baysw87rg5zklghdokcd.jpg",
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749878809/instagram_posts/rr8hyzy2kslmvdaxg2qz.jpg"
+  ],
+  "media_type": "carousel",
+  "caption": "Ever wondered how a simple idea can transform into something amazing? \u2728 This carousel takes you on the journey of Hogist's brand evolution! \u2192 Swipe to see how we've grown and evolved. \ud83d\ude80  We're incredibly proud of our journey and excited to share it with you.  Save this post to remember this milestone with us!  \u2764\ufe0f #Hogist #BrandJourney #Growth #Evolution #Innovation #BrandStory #Entrepreneurship #Milestone",
+  "scheduled_time": "2025-06-14T05:26:49",
+  "username": "hogistindia",
+  "status": "scheduled",
+  "celery_task_id": "be98a97f-e3f3-4e82-a2ed-402e61900e29",
+  "posting_attempt_at": null,
+  "error_message": null,
+  "media_id": null,
+  "created_at": "2025-06-14T05:26:50.004759",
+  "updated_at": "2025-06-14T05:26:50.111817",
+  "cloudinary_public_ids": [
+    "instagram_posts/baysw87rg5zklghdokcd",
+    "instagram_posts/rr8hyzy2kslmvdaxg2qz"
+  ],
+  "is_facebook": false
+}

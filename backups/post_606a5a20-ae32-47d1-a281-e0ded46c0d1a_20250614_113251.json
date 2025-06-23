@@ -1,0 +1,22 @@
+{
+  "id": "606a5a20-ae32-47d1-a281-e0ded46c0d1a",
+  "media_urls": [
+    "https://res.cloudinary.com/dojxw2gy6/image/upload/v1749900712/instagram_posts/ade48iqcwr0y9t5ifimu.jpg"
+  ],
+  "media_type": "image",
+  "caption": "\ud83d\udd25 Craving delicious, authentic food?  Hogist brings the taste of home to your table.  Let's connect over a shared love of great food!  \u27a1\ufe0f Visit our website in bio to explore our menu. What's your favorite Hogist dish? #Hogist #DeliciousFood #AuthenticFlavors #Foodie #FoodLover #SupportSmallBusiness #EatLocal",
+  "scheduled_time": "2025-06-14T11:31:53.276911",
+  "username": "hogistindia",
+  "status": "failed",
+  "celery_task_id": "37763f0d-b05c-4514-aeb3-559d380dc1ba",
+  "posting_attempt_at": "2025-06-14T11:32:03.353794",
+  "error_message": "local variable 'db' referenced before assignment",
+  "media_id": null,
+  "created_at": "2025-06-14T11:31:53.500436",
+  "updated_at": "2025-06-14T11:32:51.105791",
+  "cloudinary_public_ids": [
+    "instagram_posts/ade48iqcwr0y9t5ifimu"
+  ],
+  "is_facebook": true,
+  "platforms": "Facebook"
+}
