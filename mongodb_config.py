@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 class MongoDBConfig:
     # MongoDB Atlas connection
-    MONGODB_URL = 'mongodb+srv://sweathabalaji03:qrLehjhWc4MP36Ma@socialsidekick.pcltfx0.mongodb.net/'
+    MONGODB_URL = ''
     DATABASE_NAME = 'social_media_assistant'
     
     def __init__(self):
