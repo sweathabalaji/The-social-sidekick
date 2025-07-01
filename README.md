@@ -71,6 +71,8 @@ A powerful AI-powered assistant to help businesses and creators optimize their s
 | Email API    | Brevo (for campaigns and logs)            |
 
 ---
+## Demo Video
+🎬 [Download demo video]()
 
 ## 🖥️ Local Setup Instructions
 
