@@ -57,6 +57,18 @@ class Config:
     MONGODB_URL = 'mongodb+srv://sweathabalaji03:qrLehjhWc4MP36Ma@socialsidekick.pcltfx0.mongodb.net/'
     DATABASE_NAME = os.getenv('DATABASE_NAME', 'social_media_assistant')
 
+    # Brevo API Configuration (Primary Email Service)
+    BREVO_API_KEY = os.getenv('BREVO_API_KEY')  # Brevo API key
+    BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email'
+    
+    # Email sender configuration
+    DEFAULT_SENDER_NAME = os.getenv('DEFAULT_SENDER_NAME', 'HOGIST')
+    DEFAULT_SENDER_EMAIL = os.getenv('DEFAULT_SENDER_EMAIL', 'support@hogist.com')
+    
+    # Email sending limits (to prevent spam)
+    EMAIL_RATE_LIMIT = int(os.getenv('EMAIL_RATE_LIMIT', '10'))  # emails per minute
+    EMAIL_BATCH_SIZE = int(os.getenv('EMAIL_BATCH_SIZE', '50'))  # emails per batch
+
     @classmethod
     def validate_credentials(cls):
         """Validate that all required credentials are set"""

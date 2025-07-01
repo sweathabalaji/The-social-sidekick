@@ -112,12 +112,19 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Drop existing tables and recreate with new schema
 def recreate_database():
     try:
-        Base.metadata.drop_all(bind=engine)
+        # Try to drop existing tables if they exist
+        try:
+            Base.metadata.drop_all(bind=engine)
+        except Exception as drop_error:
+            logger.warning(f"Some tables might not exist during drop operation: {drop_error}")
+        
+        # Create all tables
         Base.metadata.create_all(bind=engine)
         logger.info("Database schema updated successfully")
     except Exception as e:
         logger.error(f"Error recreating database: {e}")
-        raise
+        # Don't raise the error, continue with the application
+        logger.info("Continuing with existing database schema")
 
 # Configure Cloudinary for potential deletion later
 try:
