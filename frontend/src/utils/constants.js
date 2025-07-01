@@ -128,3 +128,5 @@ export const SUCCESS_MESSAGES = {
   POST_DELETED: 'Post deleted successfully!',
   SETTINGS_SAVED: 'Settings saved successfully!',
 };
+
+export const API_BASE_URL = 'http://localhost:8000';
