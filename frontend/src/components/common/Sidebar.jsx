@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Calendar, BarChart3, Send } from 'lucide-react';
+import { Home, Calendar, BarChart3, Send, Mail } from 'lucide-react';
 
 const Sidebar = () => {
   const navItems = [
@@ -8,6 +8,7 @@ const Sidebar = () => {
     { path: '/scheduler', label: 'Post Scheduler', icon: Send },
     { path: '/calendar', label: 'Content Calendar', icon: Calendar },
     { path: '/analytics', label: 'Analytics', icon: BarChart3 },
+    { path: '/mailer', label: 'Mailer', icon: Mail },
   ];
 
   return (
