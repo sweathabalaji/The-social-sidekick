@@ -37,6 +37,8 @@ To run this application locally, you need to have **Redis** installed and runnin
 
 **3. Install Python dependencies:**
    - `pip install -r requirements.txt`
+     Also run the below mentioned command to install the node modules from package.json:
+     - `npm install`
 
 **4. Create a `.env` file:**
    - Create a file named `.env` in the root directory of your project.
@@ -62,9 +64,11 @@ To run this application locally, you need to have **Redis** installed and runnin
      `celery -A tasks beat --loglevel=info --schedule=/tmp/celerybeat-schedule`
      (On Windows, `/tmp/celerybeat-schedule` might need to be a valid path like `C:\temp\celerybeat-schedule`)
 
-**7. Start Streamlit App:**
-   - Open a final **new** terminal (or use the one where you installed dependencies) and run:
-     `streamlit run streamlit_app.py`
+**7. Start the backend server:**
+  - Open new terminal and run:
+    `python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000`
 
-This will open the application in your web browser. Ensure all four terminals are running concurrently for full functionality.
-"""
+**8. Start the frontend server:**
+  - Open new terminal and run:
+    `cd frontend && npm start`
+ 
