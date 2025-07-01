@@ -1,7 +1,7 @@
 # 📊 Social Media Automation & Analytics Assistant
 
 ![Dashboard Preview](https://github.com/sweathabalaji/The-social-sidekick/blob/6b0d574f4c19765c8a6da9c2304c6c2255ae288e/Screenshot%202025-07-01%20at%208.37.52%20PM.png)
-![Dashboard Preview](https://github.com/sweathabalaji/The-social-sidekick/blob/6b0d574f4c19765c8a6da9c2304c6c2255ae288e/Screenshot%202025-07-01%20at%208.37.52%20PM.png)
+![Dashboard Preview](https://github.com/sweathabalaji/The-social-sidekick/blob/e0e428575fc2f8280e4643b5b0c9a83000316330/Screenshot%202025-07-01%20at%208.18.08%20PM.png)
 A powerful AI-powered assistant to help businesses and creators optimize their social media strategy for Instagram and Facebook. Combines data analytics, post scheduling, and Email campaign automation in one seamless platform.
 
 ---
