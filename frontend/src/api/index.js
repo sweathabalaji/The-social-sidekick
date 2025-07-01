@@ -269,6 +269,64 @@ class ApiClient {
     }
   }
 
+  // Email image upload
+  async uploadEmailImage(file, position = 'middle') {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const sessionId = localStorage.getItem('session_id');
+    if (!sessionId) {
+      throw new Error('No session found');
+    }
+
+    const url = `${this.baseURL}/api/mailer/upload-image-hosted?session_id=${sessionId}&position=${position}`;
+    console.log(`Uploading email image to: ${url}`, {
+      filename: file.name,
+      type: file.type,
+      size: file.size,
+      position: position
+    });
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formData,
+      });
+
+      let data = {};
+      try {
+        data = await response.json();
+      } catch (e) {
+        console.error('Failed to parse response:', e);
+        throw new Error(`Upload failed for ${file.name}: Invalid server response`);
+      }
+
+      if (!response.ok) {
+        console.error('Upload failed with status:', response.status, data);
+        throw new Error(data.detail || data.message || `Upload failed with status: ${response.status}`);
+      }
+
+      if (!data.success) {
+        console.error('Upload failed:', data);
+        throw new Error(data.message || `Upload failed for ${file.name}`);
+      }
+
+      if (!data.image_info || !data.image_info.public_url) {
+        console.error('Upload response missing URL:', data);
+        throw new Error(`Upload failed for ${file.name}: No URL returned in response`);
+      }
+
+      console.log('Email image upload successful:', {
+        url: data.image_info.public_url,
+        position: position
+      });
+      return data.image_info;
+    } catch (error) {
+      console.error('Email image upload error:', error);
+      throw error;
+    }
+  }
+
   // Captions
   async generateCaptions(captionData) {
     return this.request('/api/generate-captions', {
