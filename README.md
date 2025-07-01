@@ -8,7 +8,8 @@ A powerful AI-powered assistant to help businesses and creators optimize their s
 
 ## 🚀 Features
 
-## 📅 Content Calender 
+### 📅 Content Calender 
+- Organize and manage all your upcoming content in one place using our smart, intuitive calendar system. Plan posts, upload media, and let AI do the heavy lifting.
 
 
 ### 📅 Post Scheduling
