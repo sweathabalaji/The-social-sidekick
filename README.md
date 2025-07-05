@@ -35,6 +35,7 @@ A powerful AI-powered assistant to help businesses and creators optimize their s
 ---
 
 ## 🧠 How It Works
+![Flowchart Preview](https://github.com/sweathabalaji/The-social-sidekick/blob/082b28ed2fd173c0958e6da02da5399b47271720/flowchart.png)
 
 ### User Workflow
 
