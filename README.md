@@ -73,7 +73,7 @@ A powerful AI-powered assistant to help businesses and creators optimize their s
 
 ---
 ## Demo Video
-🎬 [Download demo video](https://github.com/sweathabalaji/The-social-sidekick/blob/1ae6e2b3e1d31d61804247946fb931f83fe6ce49/workingvid.mp4)
+🎬 ![Download demo video](https://github.com/sweathabalaji/The-social-sidekick/blob/1ae6e2b3e1d31d61804247946fb931f83fe6ce49/workingvid.mp4)
 
 ## 🖥️ Local Setup Instructions
 
